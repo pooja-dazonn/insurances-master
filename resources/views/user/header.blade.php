@@ -6,7 +6,7 @@
 <meta name="keywords" content="htmlcss bootstrap menu, fixed, after scrolling page, navbar, menu CSS examples" />
 <meta name="description" content="Bootstrap 5 fixed navbar on scroll page examples, Bootstrap 5" />  
 
-<title>Demo - Bootstrap 5 fixed top header on page scroll. html code example</title>
+<title>Header</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
@@ -61,7 +61,7 @@ nav#navbar_top {
     color: #000;
 }
 li.nav-item {
-    font-size: 126%;
+    font-size: 103%;
 }
 .bg-warning {
     background-color: #011a41!important;
@@ -107,13 +107,15 @@ span.no {
 	
 
 	<ul class="navbar-nav ms-auto">
-		<li class="nav-item"><a class="nav-link" href="userindex"> Home</a></li>
-		<li class="nav-item"><a class="nav-link" href="compare"> Compare </a></li>
+		<li class="nav-item"><a class="nav-link" href="userindex"><strong>Home</strong> </a></li>
+		<li class="nav-item"><a class="nav-link" href="compare"> <strong>
+		    Compare
+		</strong> </a></li>
 		<li class="nav-item dropdown">
         @guest
               @if (Route::has('login'))
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                <a class="nav-link" href="{{ route('login') }}"><strong>{{ __('Login') }}</strong></a>
               </li>
               @endif
 
