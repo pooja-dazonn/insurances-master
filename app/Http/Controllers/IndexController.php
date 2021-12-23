@@ -7,10 +7,12 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use App\models\policy;
 use App\models\detail;
+use Illuminate\Support\Facades\Auth;
 class IndexController extends Controller
 {
     function userindex()
     {
+
         $data = array(
             'list' => DB::table('details')->get()
         );
@@ -48,11 +50,14 @@ class IndexController extends Controller
         }
     }
     function compare()
-    {
+    { 
+        if(Auth::check()){
+        return view('user/compare');
+      }
         $data = array(
             'list' => DB::table('policies')->get()
         );
-        return view('user/compare', $data);
+        return view('user/userindex', $data);
     }
     public function searchByprice(Request $req)
     {

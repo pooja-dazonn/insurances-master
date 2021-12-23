@@ -53,6 +53,15 @@ class AuthController extends Controller
        
         return Redirect::to("login")->withSuccess('Great! You have Successfully Register');
     }
+    /*public function dashboard()
+    {
+ 
+      if(Auth::check()){
+        return view('user/home');
+      }
+       return Redirect::to("login")->withSuccess('Opps! You do not have access');
+    }*/
+    
     public function create(array $data)
     {
       return User::create([
