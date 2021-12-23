@@ -15,7 +15,7 @@ class CreatePoliciesTable extends Migration
     {
         Schema::create('policies', function (Blueprint $table) {
             $table->id();
-            $table->string('extra');
+        
             $table->string('image')->nullable();
             $table->string('name');
             $table->string('investmoney');
