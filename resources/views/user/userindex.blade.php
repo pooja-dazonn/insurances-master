@@ -19,7 +19,7 @@
     height: 14%;
 }
 .col-md-4 {
-    margin-top: 3%;
+    margin-top: 1%;
 }
 </style>
 <body>
