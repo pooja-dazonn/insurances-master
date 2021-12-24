@@ -62,7 +62,8 @@
                 <div class="compare"> Compare FD &amp;
                     <br>Guaranteed Plans
                 </div>
-                <div class=">"> <button type="button" data-toggle="modal" data-target="#exampleModal">
+                <div class=">"> 
+                    <button type="button" data-toggle="modal" data-target="#exampleModal">
                         {{ __('>') }}
                     </button>
                 </div>

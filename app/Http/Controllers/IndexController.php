@@ -51,13 +51,11 @@ class IndexController extends Controller
     }
     function compare()
     { 
-        if(Auth::check()){
-        return view('user/compare');
-      }
+        
         $data = array(
             'list' => DB::table('policies')->get()
         );
-        return view('user/userindex', $data);
+        return view('user/compare', $data);
     }
     public function searchByprice(Request $req)
     {
@@ -75,6 +73,8 @@ class IndexController extends Controller
  }
  function invest($id)
  {
+    if(Auth::check()){
+      
      $row = DB::table('policies')
          ->where('id', $id)
          ->first();
@@ -83,6 +83,8 @@ class IndexController extends Controller
      ];
      return view('user/invest', $data);
  }
+ return Redirect('login');
+}
  function header()
  { 
      return view('user/header');
